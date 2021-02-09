@@ -1,0 +1,55 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+body {
+	font-family: "Roboto", sans-serif;
+	margin: 15% 5%;
+	background-color: #efefef;
+	color: #efefef;
+}
+
+ul {
+	column-count: 4;
+	column-rule-style: none;
+	list-style-type: none;
+}
+
+li {
+	text-align: center;
+	margin: 5px;
+}
+
+.fb {
+	color: #65ccee;
+}
+
+.fizzB {
+	color: #ff3b3f;
+}
+
+body .container {
+	display: flexbox;
+	align-items: center;
+	justify-content: center;
+	padding: 2%;
+}
+.container {
+	border-radius: 40px;
+	background-color: #232323;
+	box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+button.restartButton {
+	background-color: #8f8f8f;
+	color: #efefef;
+	font-size: 1em;
+	height: 2em;
+	width: 4em;
+	border-radius: 5px;
+	top: 2%;
+	right: 4%;
+	position: fixed;
+	z-index: 3000;
+}
