@@ -19,6 +19,19 @@ var inputAlert = prompt(
 );
 var inNum = parseInt(inputAlert);
 console.log(inNum);
+
+// Esta funcion es para comprobar que todo el imput sea numeros y no contenga letras
+Function allnumeric(inNum){
+	var numbers = /^[0-9]+$/;
+	if(inNum.valueOf.match(numbers)){
+		return true;
+	}else{
+		alert('Por favor introduce unicamente caracteres numericos')
+		inputAlert();
+		return false;
+	}
+}
+
 // The innerText property of the HTMLElement interface
 // represents the "rendered" text content of a node and
 // its descendants. As a getter, it approximates the text
