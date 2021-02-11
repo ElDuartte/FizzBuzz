@@ -17,10 +17,12 @@ function refreshPage() {
 
 function promptForNumber() {
 	do {
-		var selection = parseInt(
-			window.prompt("Ingresa una cantidad por analizar", ""),
-			10
-		);
+		var selection;
+		selection = window.prompt("Ingresa una cantidad por analizar", "");
+		if (selection == null) {
+			return;
+		}
+		parseInt(selection);
 	} while (isNaN(selection) || selection <= 0);
 	checkNumber(selection);
 }
