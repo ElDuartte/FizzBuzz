@@ -13,23 +13,16 @@ function refreshPage() {
 	window.location.reload();
 }
 
-var inputAlert = prompt(
-	"Por favor escribe la cantidad que deseas analizar ",
-	"0"
-);
-var inNum = parseInt(inputAlert);
-console.log(inNum);
+// Funcion para hacer una solicitud de input mediante un prompt
 
-// Esta funcion es para comprobar que todo el imput sea numeros y no contenga letras
-Function allnumeric(inNum){
-	var numbers = /^[0-9]+$/;
-	if(inNum.valueOf.match(numbers)){
-		return true;
-	}else{
-		alert('Por favor introduce unicamente caracteres numericos')
-		inputAlert();
-		return false;
-	}
+function promptForNumber() {
+	do {
+		var selection = parseInt(
+			window.prompt("Ingresa una cantidad por analizar", ""),
+			10
+		);
+	} while (isNaN(selection) || selection <= 0);
+	checkNumber(selection);
 }
 
 // The innerText property of the HTMLElement interface
@@ -44,7 +37,7 @@ Function allnumeric(inNum){
 // Basically, innerText is aware of the rendered
 // appearance of text, while textContent is not.
 
-function fizz(num) {
+function checkNumber(num) {
 	for (let i = 1; i <= num; i++) {
 		// Se crea una nueva etiqueta <li></li>
 		let element = document.createElement("li");
@@ -67,4 +60,3 @@ function fizz(num) {
 		document.getElementById("currentP").appendChild(element);
 	}
 }
-fizz(inNum);
