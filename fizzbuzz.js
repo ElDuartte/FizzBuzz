@@ -23,8 +23,10 @@ function promptForNumber() {
 			return;
 		}
 		parseInt(selection);
-	} while (isNaN(selection) || selection <= 0);
-	checkNumber(selection);
+		// Math.round(); redondea el numero al integer mas cercano
+		var roundSelection = Math.round(selection);
+	} while (isNaN(roundSelection) || roundSelection <= 0);
+	checkNumber(roundSelection);
 }
 
 // The innerText property of the HTMLElement interface
